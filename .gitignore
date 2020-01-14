@@ -1,0 +1,6 @@
+# ignore this files#
+# 忽略所有视频
+*.mp4
+*.avi
+*__pycache__
+*.idea

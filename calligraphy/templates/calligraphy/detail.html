@@ -1,0 +1,97 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="{% static 'calligraphy/assets/img/favicon.ico' %}">
+
+    <title>书法生成</title>
+
+    <link href="{% static 'calligraphy/assets/css/bootstrap.css' %}" rel="stylesheet">
+ 	<link href="{% static 'calligraphy/assets/css/style.css' %}" rel="stylesheet">
+    <script src="{% static 'calligraphy/assets/js/jquery.min.js' %}"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="{% static 'calligraphy/assets/js/html5shiv.js' %}"></script>
+      <script src="{% static 'calligraphy/assets/js/respond.min.js' %}"></script>
+    <![endif]-->
+  </head>
+
+<body data-spy="scroll" data-offset="0" data-target="#navbar-main">
+  	<div id="navbar-main">
+		<div class="navbar navbar-default navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="/calligraphy"><h1>书法生成</h1></a>
+					<button type="button" class="navbar-toggle dropdown-toggle" id="open-menu" data-toggle="dropdown" data-target="#main-navigation">
+						<i class="el-icon-lines"></i>
+					</button>
+				</div>
+				<div class="navbar-collapse collapse" id="main-navigation">
+					<ul class="nav navbar-nav">
+						<li><a href="/calligraphy" class="smoothScroll">首页</a></li>
+						<li><a href="/calligraphy/history" class="smoothScroll">检测历史</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+    </div>
+
+    <div id="" name="home" class="" style="height: 100px; min-height: 200px;">
+		<header class="clearfix " >
+  		</header>
+    </div>
+
+	<!--  CONTENT WRAPPER -->
+	<div id="content-wrapper">
+
+<!--		<section class="container page-section">-->
+<!--			<div class="row white">-->
+<!--				<h1 class="fade-down centered section-title">检测结果</h1>-->
+<!--				<hr>-->
+<!--			</div>-->
+<!--		</section>-->
+
+		<section class="container page-section">
+			<div class="row white">
+				<h1 class="fade-down centered section-title">原文本</h1>
+			</div>
+
+			<div class="row white">
+                <p>{{history.content}}</p>
+			</div>
+
+		</section>
+
+		<section class="container page-section">
+			<div class="row white">
+				<h1 class="fade-down centered section-title">生成结果</h1>
+			</div>
+
+			<div class="row white">
+<!--                <p>{{history.calligraphy}}</p>-->
+				<img src="../../{{history.calligraphy}}" width="100%" height="100%">
+			</div>
+
+		</section>
+	</div>
+
+
+	<script type="text/javascript" src="{% static 'calligraphy/assets/js/bootstrap.js' %}"></script>
+    <script type="text/javascript" src="{% static 'calligraphy/assets/js/plugins.js' %}"></script>
+	<script type="text/javascript" src="{% static 'calligraphy/assets/js/init.js' %}"></script>
+
+	<script type="text/javascript">
+		jQuery(document).ready(function($){
+			'use strict';
+			  jQuery('body').backstretch([
+				  // "{% static 'calligraphy/assets/img/bg/bg1.jpg' %}"
+				 "{% static 'calligraphy/assets/img/bg/bg2.jpg' %}"
+				, "{% static 'calligraphy/assets/img/bg/bg3.jpg' %}"
+			  ], {duration: 5000, fade: 500});
+			});
+
+	</script>
+  </body>
+</html>
