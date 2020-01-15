@@ -3,6 +3,7 @@ python manage.py runserver
 或
 
 python manage.py runserver 0.0.0.0:8889
+python manage.py runserver 9009
 
 2，创建应用
 python manage.py startapp polls

@@ -22,15 +22,15 @@
 		<div class="navbar navbar-default navbar-fixed-top">
 			<div class="container">
 				<div class="navbar-header">
-					<a class="navbar-brand" href="/calligraphy"><h1>书法生成</h1></a>
+					<a class="navbar-brand" href="/calligraphy"><h1 style="font-size:25px;font-family:'华文行楷';">书法生成</h1></a>
 					<button type="button" class="navbar-toggle dropdown-toggle" id="open-menu" data-toggle="dropdown" data-target="#main-navigation">
 						<i class="el-icon-lines"></i>
 					</button>
 				</div>
 				<div class="navbar-collapse collapse" id="main-navigation">
 					<ul class="nav navbar-nav">
-						<li><a href="/calligraphy" class="smoothScroll">首页</a></li>
-						<li><a href="/calligraphy/history" class="smoothScroll">生成历史</a></li>
+						<li><a href="/calligraphy" class="smoothScroll" style="font-size:20px;font-family:'华文行楷';">首页</a></li>
+						<li><a href="/calligraphy/history" class="smoothScroll" style="font-size:20px;font-family:'华文行楷';">生成历史</a></li>
 					</ul>
 				</div>
 			</div>
@@ -43,18 +43,18 @@
     </div>
 
 	<!--  CONTENT WRAPPER -->
-	<div id="content-wrapper">
-		<section id="about" class="container page-section">
+	<div id="content-wrapper"  style="width: 60%">
+		<section id="about" class="container page-section"  style="width: 90%">
 			<div class="row white">
                 <table  align="center" class="table table-striped" id="tb_videolist">
-                <caption style="text-align: center; font-weight: 900px; font-size:20px"><h1 class="fade-down centered section-title">生成历史</h1></caption>
+                <caption style="text-align: center; font-weight: 900px; font-size:20px"><h1 class="fade-down centered section-title" style="font-size:25px;font-family:'华文行楷';">生成历史</h1></caption>
                 <thead>
-                    <tr style="background:#EAEAEA">
-                    <th style="width:45px;text-align: center" >编号</th>
-                    <th style="width:400px;text-align: center">原文本</th>
-                    <th style="width:400px;text-align: center">检测结果</th>
-                    <th style="width:80px;text-align: center">处理时间</th>
-                    <th style="width:50px;text-align: center">操作</th>
+                    <tr style="background:#EAEAEA" >
+                    <th style="width:45px;text-align: center;font-size:20px;font-family:'华文行楷';" >编号</th>
+                    <th style="width:100px;text-align: center;font-size:20px;font-family:'华文行楷';">原文本</th>
+                    <th style="width:100px;text-align: center;font-size:20px;font-family:'华文行楷';">检测结果</th>
+                    <th style="width:80px;text-align: center;font-size:20px;font-family:'华文行楷';">时间</th>
+                    <th style="width:50px;text-align: center;font-size:20px;font-family:'华文行楷';">操作</th>
                     </tr>
                 </thead>
                 <tbody id = "itemContainer">
@@ -65,7 +65,8 @@
                         {{history.content}}
                     </td>
                     <td style="text-align: center">
-                         {{history.calligraphy}}
+                        <img src="../../{{history.calligraphy}}" width="100px" height="100px">
+                         <!--{{history.calligraphy}}-->
                     </td>
                     <td style="text-align: center;display: table-cell; vertical-align: middle; " name="timeStamp">
                         {{history.timeStamp}}

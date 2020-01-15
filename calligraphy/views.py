@@ -9,7 +9,8 @@ import pytz
 from datetime import datetime
 from .models import History
 from django.views import generic
-
+import sys,os
+# from .zi2zi import infer_by_text_api
 
 def index(request):
     # print("hello world")
@@ -46,7 +47,15 @@ def check_txt(request):
     history_id = t.strftime('%Y%m%d%H%M%S')
     history = History(history_id=history_id)
     history.content = content
-    history.calligraphy = "static/calligraphy/genimgs/"+history_id+".jpg"
+
+
+    rootpath = os.path.dirname(os.path.abspath(__file__))
+    path = os.path.join(rootpath, 'zi2zi')
+    sys.path.append(path)
+    history.calligraphy = "static/calligraphy/genimgs/" + history_id + ".jpg"
+    import infer_by_text_api
+    infer_by_text_api.infer_by_text_api(content,9 ,os.path.join(rootpath,history.calligraphy))
+
     history.timeStamp = timestamp
     history.info = "info"
     history.save()

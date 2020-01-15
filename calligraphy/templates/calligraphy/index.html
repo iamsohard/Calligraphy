@@ -22,40 +22,40 @@
 		<div class="navbar navbar-default navbar-fixed-top">
 			<div class="container">
 				<div class="navbar-header">
-					<a class="navbar-brand" href="/calligraphy"><h1>书法生成</h1></a>
+					<a class="navbar-brand" href="/calligraphy"><h1><font size="25" face="华文行楷">书法生成</h1></a>
 					<button type="button" class="navbar-toggle dropdown-toggle" id="open-menu" data-toggle="dropdown" data-target="#main-navigation">
 						<i class="el-icon-lines"></i>
 					</button>
 				</div>
 				<div class="navbar-collapse collapse" id="main-navigation">
 					<ul class="nav navbar-nav">
-						<li><a href="/calligraphy" class="smoothScroll">首页</a></li>
+						<li><a href="/calligraphy" class="smoothScroll" style="font-size:20px;">首页</a></li>
 <!--						<li><a href="#about" class="smoothScroll">关于</a></li>-->
-						<li><a href="/calligraphy/history" class="smoothScroll">生成历史</a></li>
+						<li><a href="/calligraphy/history" class="smoothScroll" style="font-size:20px;">生成历史</a></li>
 					</ul>
 				</div>
 			</div>
 		</div>
     </div>
 
-    <div id="" name="home" class="" style="height: 100px; min-height: 200px;">
+    <div id="" name="home" class="" style="height: 50px; min-height: 200px;">
 		<header class="clearfix " >
   		</header>
     </div>
 
 	<!--  CONTENT WRAPPER -->
-	<div id="content-wrapper">
+	<div id="content-wrapper" style="width: 60%">
 
-		<section id="about" class="container page-section">
+		<section id="about" class="container page-section" style="width: 90%">
 			<div class="row white">
-				<h1 class="fade-down centered section-title">书法生成</h1>
+				<h1 class="fade-down centered section-title" style="font-family:'华文行楷';font-size: 40px">书法生成</h1>
 				<hr>
 			</div>
 
 			<div class="row white">
 				<form class="form-01__form"   >
 					<div class="form__item" style="padding:0;width: 100%">
-						<textarea rows="5" name="news_content" value="请输入书法内容" id= "news_content"  style="padding:0;line-height:30px;width: 100%;height:500px;" placeholder="永和九年，岁在癸丑，暮春之初，会于会稽山阴之兰亭，修禊事也。" ></textarea>
+						<textarea rows="5" name="news_content" value="请输入书法内容" id= "news_content"  style="font-family:'华文行楷';font-size:20px;padding:0;line-height:30px;width: 100%;height:150px;" placeholder="永和九年，岁在癸丑，暮春之初，会于会稽山阴之兰亭，修禊事也。" ></textarea>
 					</div>
 					<div class="form__button">
 						<input id="btn_post" type="submit" class="btn btn-primary  btn-lg btn-radius" style="font-size:18px;margin-right:20px;" value="点击生成" onclick="check_txt()" />
@@ -75,8 +75,8 @@
 			'use strict';
 			  jQuery('body').backstretch([
 				  // "{% static 'calligraphy/assets/img/bg/bg1.jpg' %}"
-				 "{% static 'calligraphy/assets/img/bg/bg2.jpg' %}"
-				, "{% static 'calligraphy/assets/img/bg/bg3.jpg' %}"
+				 //"{% static 'calligraphy/assets/img/bg/bg2.jpg' %}"
+				 "{% static 'calligraphy/assets/img/bg/bg3.jpg' %}"
 			  ], {duration: 5000, fade: 500});
 			});
 
